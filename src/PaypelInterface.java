@@ -1,6 +1,6 @@
 public interface PaypelInterface {
 
-    void makePaypalTransaction(int amount);
+    void makePaypalTransaction(float amount);
 
     String getEmail();
 

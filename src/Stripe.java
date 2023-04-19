@@ -1,13 +1,13 @@
 public class Stripe implements StripeInterface{
-    private int payment_amount;
+    private float payment_amount;
     private String card_holder_name;
     private int card_number;
     private int exp_date;
 
     @Override
-    public void makeStripeTransaction(int amount) {
+    public void makeStripeTransaction(float amount) {
         payment_amount = amount;
-        System.out.println("Sending amount:" + payment_amount);
+        System.out.println("Sending $" + amount + " via stripe: ");
     }
 
     @Override

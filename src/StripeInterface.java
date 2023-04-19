@@ -1,6 +1,6 @@
 public interface StripeInterface{
 
-    void makeStripeTransaction(int amount);
+    void makeStripeTransaction(float amount);
 
     String getCardName();
 
