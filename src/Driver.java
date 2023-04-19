@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Objects;
-
 public class Driver {
     public static void main(String[] args) {
         Paypal paypal_transaction = new Paypal();
@@ -22,8 +20,8 @@ public class Driver {
 
         PaymentAdapter adapter = new PaymentAdapter();
 
-        for(int i=0; i<gateways.size(); i++){
-            adapter.makeTransaction(gateways.get(i).getClass().toString(), 100);
+        for (Object gateway : gateways) {
+            adapter.makeTransaction(gateway.getClass().toString(), 100);
         }
     }
 }
